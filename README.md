@@ -31,8 +31,8 @@
 
 * [Features](#link-features)
 * [Installation](#construction_worker-installation)
-* [Dependencies](#lock-dependencies)
 * [Getting Started](#checkered_flag-getting-started)
+* [Dependencies](#lock-dependencies)
 * [FAQ](#postbox-faq)
 * [Found a bug? Missing a specific feature?](#hammer-issues)
 * [License](#book-license)
@@ -58,17 +58,6 @@ SSH URLs provide access to a Git repository via SSH, a secure protocol. If you h
 
 ```yarn install``` or ```npm install```
 
-# :lock: Dependencies
-
-**Important: These aren't development dependencies.**
-
-**Frontend dependencies**
-* [react](https://www.npmjs.com/package/react) & [react-dom](https://www.npmjs.com/package/react-dom)
-* [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
-
-**Backend dependencies**
-* [express](https://expressjs.com/)
-
 # :checkered_flag: Getting Started
 
 Run the following command in order to start the application in a development environment:
@@ -80,6 +69,17 @@ Run the following command in order to start the application in a development env
 **Backend Initialization**
 
 ```yarn dev``` or ```npm run dev```
+
+# :lock: Dependencies
+
+**Important: These aren't development dependencies.**
+
+**Frontend dependencies**
+* [react](https://www.npmjs.com/package/react) & [react-dom](https://www.npmjs.com/package/react-dom)
+* [react-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
+
+**Backend dependencies**
+* [express](https://expressjs.com/)
 
 # :postbox: FAQ
 
