@@ -1,6 +1,6 @@
 import React, { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { FiArrowLeft } from "react-icons/fi";
+import { FiArrowLeft, FiCheckCircle } from "react-icons/fi";
 import { Map, TileLayer, Marker } from "react-leaflet";
 import axios from "axios";
 import { LeafletMouseEvent } from "leaflet";
@@ -11,6 +11,19 @@ import Dropzone from "../../components/Dropzone";
 import "./styles.css";
 
 import logo from "../../assets/logo.svg";
+
+import Modal from "react-modal";
+
+const customStyles = {
+	content: {
+		top: "50%",
+		left: "50%",
+		right: "auto",
+		bottom: "auto",
+		marginRight: "-50%",
+		transform: "translate(-50%, -50%)",
+	},
+};
 
 interface Item {
 	id: number;
@@ -49,6 +62,8 @@ const CreatePoint = () => {
 		0,
 		0,
 	]);
+
+	const [modalIsOpen, setIsOpen] = useState(false);
 
 	const history = useHistory();
 
@@ -130,6 +145,8 @@ const CreatePoint = () => {
 	async function handleSubmit(e: FormEvent) {
 		e.preventDefault();
 
+		setIsOpen(true);
+
 		const { name, email, whatsapp } = formData;
 		const uf = selectedUf;
 		const city = selectedCity;
@@ -153,7 +170,10 @@ const CreatePoint = () => {
 
 		await api.post("points", data);
 
-		history.push("/");
+		setTimeout(() => {
+			setIsOpen(false);
+			history.push("/");
+		}, 2000);
 	}
 
 	return (
@@ -215,7 +235,12 @@ const CreatePoint = () => {
 						<span>Selecione o endereço no mapa</span>
 					</legend>
 
-					<Map center={initialPosition} zoom={15} onClick={handleMapClick}>
+					<Map
+						className={modalIsOpen ? "map" : ""}
+						center={initialPosition}
+						zoom={15}
+						onClick={handleMapClick}
+					>
 						<TileLayer
 							attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 							url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -280,6 +305,19 @@ const CreatePoint = () => {
 
 				<button type="submit">Cadastrar ponto de coleta</button>
 			</form>
+
+			<Modal
+				isOpen={modalIsOpen}
+				style={customStyles}
+				overlayClassName="modal-overlay"
+				className="modal"
+				shouldFocusAfterRender={false}
+			>
+				<h1>
+					<FiCheckCircle />
+					Cadastro concluído!
+				</h1>
+			</Modal>
 		</div>
 	);
 };

@@ -201,3 +201,43 @@
 	background: #e1faec;
 	border: 2px solid #34cb79;
 }
+
+.map {
+	z-index: 0;
+}
+
+.modal {
+	position: absolute;
+	background-color: #000000;
+	opacity: 0.9;
+}
+
+.modal h1 {
+	color: #2fb86e;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-family: Roboto, Ubunto, sans-serif;
+}
+
+.modal h1 svg {
+	color: #4ecb79;
+	width: 48px;
+	height: 48px;
+	margin-bottom: 16px;
+}
+
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000;
+	opacity: 0.9;
+	z-index: 0;
+	border: none;
+	outline: none;
+}
