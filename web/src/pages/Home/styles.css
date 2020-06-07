@@ -13,11 +13,31 @@
 
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
+	align-items: unset;
 }
 
-#page-home .content header {
-	margin: 48px 0 0;
+#page-home header {
+	margin-top: 48px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#page-home header a {
+	color: var(--title-color);
+	font-weight: bold;
+	text-decoration: none;
+
+	display: flex;
+	align-items: center;
+}
+
+#page-home header a svg {
+	color: var(--primary-color);
+	margin-right: 8px;
+	height: 24px;
+	width: 24px;
 }
 
 #page-home .content main {

@@ -23,8 +23,10 @@
 }
 
 #page-create-point header a svg {
-	margin-right: 16px;
 	color: var(--primary-color);
+	margin-right: 8px;
+	height: 24px;
+	width: 24px;
 }
 
 #page-create-point form {
