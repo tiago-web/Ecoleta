@@ -208,13 +208,11 @@
 	z-index: 0;
 }
 
-.modal {
+.modal-create-point {
 	position: absolute;
-	background-color: #000000;
-	opacity: 0.9;
 }
 
-.modal h1 {
+.modal-create-point h1 {
 	color: #2fb86e;
 	display: flex;
 	flex-direction: column;
@@ -224,21 +222,20 @@
 	font-family: Roboto, Ubunto, sans-serif;
 }
 
-.modal h1 svg {
+.modal-create-point h1 svg {
 	color: #4ecb79;
 	width: 48px;
 	height: 48px;
 	margin-bottom: 16px;
 }
 
-.modal-overlay {
+.modal-create-point-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #000000;
-	opacity: 0.9;
+	background-color: #000000e5;
 	z-index: 0;
 	border: none;
 	outline: none;

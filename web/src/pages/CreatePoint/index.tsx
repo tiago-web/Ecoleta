@@ -2,8 +2,9 @@ import React, { useEffect, useState, ChangeEvent, FormEvent } from "react";
 import { Link, useHistory } from "react-router-dom";
 import { FiArrowLeft, FiCheckCircle } from "react-icons/fi";
 import { Map, TileLayer, Marker } from "react-leaflet";
-import axios from "axios";
 import { LeafletMouseEvent } from "leaflet";
+import Modal from "react-modal";
+import axios from "axios";
 import api from "../../services/api";
 
 import Dropzone from "../../components/Dropzone";
@@ -11,8 +12,6 @@ import Dropzone from "../../components/Dropzone";
 import "./styles.css";
 
 import logo from "../../assets/logo.svg";
-
-import Modal from "react-modal";
 
 const customStyles = {
 	content: {
@@ -87,7 +86,7 @@ const CreatePoint = () => {
 				"https://servicodados.ibge.gov.br/api/v1/localidades/estados"
 			)
 			.then(response => {
-				const ufInitials = response.data.map(uf => uf.sigla);
+				const ufInitials = response.data.map(uf => uf.sigla).sort();
 				setUfs(ufInitials);
 			});
 	}, []);
@@ -201,6 +200,7 @@ const CreatePoint = () => {
 					<div className="field">
 						<label htmlFor="name">Nome da entidade</label>
 						<input
+							autoComplete="off"
 							type="text"
 							name="name"
 							id="name"
@@ -212,6 +212,7 @@ const CreatePoint = () => {
 						<div className="field">
 							<label htmlFor="email">E-mail</label>
 							<input
+								autoComplete="off"
 								type="email"
 								name="email"
 								id="email"
@@ -221,6 +222,7 @@ const CreatePoint = () => {
 						<div className="field">
 							<label htmlFor="whatsapp">Whatsapp</label>
 							<input
+								autoComplete="off"
 								type="text"
 								name="whatsapp"
 								id="whatsapp"
@@ -309,9 +311,11 @@ const CreatePoint = () => {
 			<Modal
 				isOpen={modalIsOpen}
 				style={customStyles}
-				overlayClassName="modal-overlay"
-				className="modal"
+				overlayClassName="modal-create-point-overlay"
+				className="modal-create-point"
 				shouldFocusAfterRender={false}
+				contentLabel="Cadastro concluído!"
+				ariaHideApp={false}
 			>
 				<h1>
 					<FiCheckCircle />

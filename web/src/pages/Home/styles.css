@@ -125,3 +125,44 @@
 		font-size: 24px;
 	}
 }
+
+.modal-home {
+	position: absolute;
+	opacity: 1;
+}
+
+.modal-home-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000000e5;
+	z-index: 0;
+	border: none;
+	outline: none;
+}
+
+.modal-home h1 {
+	color: #2fb86e;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-family: Roboto, Ubunto, sans-serif;
+}
+
+.modal-home input {
+	background-color: #fff;
+	margin-bottom: 16px;
+}
+
+.modal-home .modal-submit {
+	margin-top: 8px;
+	width: 100%;
+	max-width: 360px;
+	height: 48px;
+	background: var(--primary-color);
+	border-radius: 8px;
+}
