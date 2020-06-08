@@ -1,12 +1,11 @@
 #page-show-points {
 	width: 100%;
 	max-width: 1100px;
-
 	margin: 0 auto;
 }
 
 #page-show-points header {
-	margin-top: 48px;
+	padding: 48px 0;
 
 	display: flex;
 	justify-content: space-between;
@@ -27,4 +26,8 @@
 	margin-right: 8px;
 	height: 24px;
 	width: 24px;
+}
+
+#page-show-points p {
+	margin-top: 24px;
 }
