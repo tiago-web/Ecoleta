@@ -48,7 +48,9 @@ const ShowPoints = () => {
 				</Link>
 			</header>
 
-			<p>{pointsFound} pontos encontrados</p>
+			<p>
+				<strong>{pointsFound} pontos</strong> encontrados
+			</p>
 
 			<Card />
 		</div>
