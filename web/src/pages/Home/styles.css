@@ -60,13 +60,13 @@
 	line-height: 38px;
 }
 
-#page-home .content main a {
+#page-home .content main .show-points-link {
 	width: 100%;
 	max-width: 360px;
 	height: 72px;
 	background: var(--primary-color);
 	border-radius: 8px;
-	text-decoration: none;
+	border: none;
 
 	display: flex;
 	align-items: center;
@@ -75,7 +75,7 @@
 	margin-top: 40px;
 }
 
-#page-home .content main a span {
+#page-home .content main .show-points-link span {
 	display: block;
 	background: rgba(0, 0, 0, 0.08);
 	width: 72px;
@@ -87,19 +87,19 @@
 	transition: background-color 0.2s;
 }
 
-#page-home .content main a span svg {
+#page-home .content main .show-points-link span svg {
 	color: #fff;
 	width: 20px;
 	height: 20px;
 }
 
-#page-home .content main a strong {
+#page-home .content main .show-points-link strong {
 	flex: 1;
 	text-align: center;
 	color: #fff;
 }
 
-#page-home .content main a:hover {
+#page-home .content main .show-points-link:hover {
 	background: #2fb86e;
 }
 
@@ -129,6 +129,7 @@
 .modal-home {
 	position: absolute;
 	opacity: 1;
+	width: 25%;
 }
 
 .modal-home-overlay {
@@ -145,6 +146,7 @@
 
 .modal-home h1 {
 	color: #2fb86e;
+	margin-bottom: 24px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -153,16 +155,17 @@
 	font-family: Roboto, Ubunto, sans-serif;
 }
 
-.modal-home input {
-	background-color: #fff;
-	margin-bottom: 16px;
+.modal-home .modal-submit {
+	width: 100%;
+	height: 56px;
+	background: var(--primary-color);
+	color: #fff;
+	border-radius: 8px;
 }
 
-.modal-home .modal-submit {
-	margin-top: 8px;
-	width: 100%;
-	max-width: 360px;
-	height: 48px;
-	background: var(--primary-color);
+.autocomplete-home {
+	background-color: #fff;
+	margin-bottom: 16px;
 	border-radius: 8px;
+	width: 100%;
 }

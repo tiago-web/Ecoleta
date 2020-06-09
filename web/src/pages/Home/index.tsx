@@ -36,7 +36,7 @@ const Home = () => {
 	const [selectedCity, setSelectedCity] = useState("");
 	const [selectedUf, setSelectedUf] = useState("");
 
-	const [modalIsOpen, setIsOpen] = useState(true);
+	const [modalIsOpen, setModalIsOpen] = useState(false);
 
 	const history = useHistory();
 
@@ -69,7 +69,7 @@ const Home = () => {
 	function handleSubmit(e: FormEvent) {
 		e.preventDefault();
 
-		setIsOpen(false);
+		setModalIsOpen(false);
 
 		history.push({
 			pathname: "/show-points",
@@ -94,12 +94,15 @@ const Home = () => {
 						Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.
 					</p>
 
-					<Link to="/show-points">
+					<button
+						className="show-points-link"
+						onClick={() => setModalIsOpen(true)}
+					>
 						<span>
 							<FiSearch />
 						</span>
 						<strong>Pesquisar pontos de coleta</strong>
-					</Link>
+					</button>
 
 					<Modal
 						isOpen={modalIsOpen}
@@ -113,6 +116,8 @@ const Home = () => {
 						<h1>Pontos de coleta</h1>
 						<form onSubmit={handleSubmit}>
 							<Autocomplete
+								className="autocomplete-home"
+								freeSolo
 								inputValue={selectedUf}
 								onInputChange={(event, newInputValue) => {
 									setSelectedUf(newInputValue);
@@ -128,6 +133,8 @@ const Home = () => {
 								)}
 							/>
 							<Autocomplete
+								className="autocomplete-home"
+								freeSolo
 								inputValue={selectedCity}
 								onInputChange={(event, newInputValue) => {
 									setSelectedCity(newInputValue);
