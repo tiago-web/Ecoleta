@@ -25,6 +25,11 @@
    </a>
 </p>
 
+<p align="center"><img src=".github/web1.gif?raw=true"/></p>
+<p align="center"><img src=".github/web2.gif?raw=true"/></p>
+<p align="center"><img src=".github/web3.gif?raw=true"/></p>
+<p align="center"><img src=".github/web4.gif?raw=true"/></p>
+
 ---
 
 # :pushpin: Table of Contents
@@ -42,7 +47,7 @@
 
 * 📝 Register new drop-off locations.
 * 🔍 Search for the nearest drop-off location.
-* 💻 Connect locations to citizens.
+* 💻 Connect recycling locations to citizens.
 
 # :construction_worker: Installation
 
@@ -83,9 +88,9 @@ Run the following command in order to start the application in a development env
 
 # :postbox: FAQ
 
-**Question:** What is the technology used in this project?
+**Question:** What are the technologies used in this project?
 
-**Answer:** The tecnology used in this project is [React](https://reactjs.org/) & [Node.js](https://nodejs.org/en/download/).
+**Answer:** The tecnologies used in this project are [React](https://reactjs.org/) & [Node.js](https://nodejs.org/en/download/).
 
 # :hammer: Issues
 
