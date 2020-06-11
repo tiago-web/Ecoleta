@@ -7,6 +7,8 @@
 
 > Find the Nearest Drop-Off Locations
 
+---
+
 <p align="center">
    <a href="https://github.com/tiago-web" style="text-decoration: none">
     <img alt="Author" src="https://img.shields.io/badge/Author-tiago--web-34CB79" />
@@ -77,7 +79,7 @@ Run the following command in order to start the application in a development env
 
 # :lock: Dependencies
 
-**Important: These aren't development dependencies.**
+**Important: These are only the most important ones.**
 
 **Frontend dependencies**
 * [react](https://www.npmjs.com/package/react) & [react-dom](https://www.npmjs.com/package/react-dom)
@@ -85,12 +87,13 @@ Run the following command in order to start the application in a development env
 
 **Backend dependencies**
 * [express](https://expressjs.com/)
+* [sqlite3](https://www.npmjs.com/package/sqlite3)
 
 # :postbox: FAQ
 
 **Question:** What are the technologies used in this project?
 
-**Answer:** The tecnologies used in this project are [React](https://reactjs.org/) & [Node.js](https://nodejs.org/en/download/).
+**Answer:** The tecnologies used in this project are [React](https://reactjs.org/), [SQLite](https://www.sqlite.org/index.html) & [Node.js](https://nodejs.org/en/download/).
 
 # :hammer: Issues
 
